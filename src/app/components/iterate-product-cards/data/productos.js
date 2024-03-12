@@ -19,7 +19,7 @@ const products = [
         id: 3,
         img: 'https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_.jpg',
         name: 'Product 3',
-        price: 14.99,
+        price: 0,
         description: 'This is the description for Product 3.',
         fecha: 'Wed Apr 12 2023 09:45:00 GMT+0100 (hora estándar de Europa central)'
     },
@@ -35,7 +35,7 @@ const products = [
         id: 5,
         img: 'https://fakestoreapi.com/img/71pWzhdJNwL._AC_UL640_QL65_ML3_.jpg',
         name: 'Product 5',
-        price: 9.99,
+        price: 900.00,
         description: 'This is the description for Product 5.',
         fecha: 'Sun Aug 27 2023 21:10:00 GMT+0100 (hora estándar de Europa central)'
     }

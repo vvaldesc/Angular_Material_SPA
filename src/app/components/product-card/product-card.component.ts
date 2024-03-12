@@ -26,11 +26,11 @@ export class ProductCardComponent {
     fecha: new Date()
   };
 
-  mostrarFormulario() {
+  mostrarFormulario(): void {
     console.log('Mostrando formulario');
   }
 
-  specialStyle = {
-    color: 'red !important',
+  specialStyle: any = {
+    color: 'red'
   };  
 }

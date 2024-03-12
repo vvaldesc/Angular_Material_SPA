@@ -11,7 +11,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
 import { IterateProductCardsComponent } from './iterate-product-cards/iterate-product-cards.component';
 import { BuyProductFormComponent } from './buy-product-form/buy-product-form.component';
 import { FormsModule } from '@angular/forms';
-import { AppRoutingModule } from '../app-routing.module'; // Import the missing AppRoutingModule
+import { AppRoutingModule } from '../app-routing.module';
+import { HorizontalNavComponent } from './horizontal-nav/horizontal-nav.component'; // Import the missing AppRoutingModule
 @NgModule({
   declarations: [
     HeaderComponent,
@@ -22,7 +23,8 @@ import { AppRoutingModule } from '../app-routing.module'; // Import the missing 
     UserCardComponent,
     ProductCardComponent,
     IterateProductCardsComponent,
-    BuyProductFormComponent
+    BuyProductFormComponent,
+    HorizontalNavComponent
   ],
   imports: [
     CommonModule,
@@ -31,6 +33,7 @@ import { AppRoutingModule } from '../app-routing.module'; // Import the missing 
   ],
   exports: [
     HeaderComponent,
+    HorizontalNavComponent,
     IterateProductCardsComponent,
     FooterComponent
   ]

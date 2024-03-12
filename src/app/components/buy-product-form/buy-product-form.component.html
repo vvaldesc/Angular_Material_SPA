@@ -1,7 +1,8 @@
-<button (click)="toogleForm()">Comprar</button>
+<button 
+(click)="toogleForm()"
+[disabled]="(product.price === 0) ? true : false"
+>Comprar</button>
     <form [style.display]="!formState ? 'none' : 'block'" (ngSubmit)="returnPost()">
-        
-
         <label for="address" class="form-label">Address:</label>
         <input 
         [(ngModel)]="address"

@@ -1,12 +1,12 @@
 <app-header></app-header>
+<app-horizontal-nav></app-horizontal-nav>
 <main class="main">
-  <div class="content">
-    <div class="left-side">
-      <h1>Hello, {{ title }}</h1>
-      <p>Congratulations! Your app is running. 🎉</p>
-      <app-iterate-product-cards></app-iterate-product-cards>
+    <div class="content">
+        <div class="left-side">
+            <h1>Hello, {{ title }}</h1>
+            <p>Congratulations! Your app is running. 🎉</p>
+            <router-outlet></router-outlet>
+        </div>
     </div>
-  </div>
 </main>
 <app-footer></app-footer>
-<router-outlet />
