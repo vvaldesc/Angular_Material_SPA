@@ -1,12 +1,29 @@
-<app-header></app-header>
 <app-horizontal-nav></app-horizontal-nav>
-<main class="main">
-    <div class="content">
-        <div class="left-side">
-            <h1>Hello, {{ title }}</h1>
-            <p>Congratulations! Your app is running. 🎉</p>
-            <router-outlet></router-outlet>
-        </div>
-    </div>
-</main>
+<mat-toolbar color="primary" >
+    <button 
+        mat-mini-fab color="primary" 
+        aria-label="Example icon button with a menu icon" 
+        (click)="desplegable.toggle()">
+        <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App</span>
+</mat-toolbar>
+<app-header></app-header>
+<mat-sidenav-container id="contenedor">
+    <mat-sidenav #desplegable mode="side">
+        <h2>Menu</h2>
+        <app-horizontal-nav [row]=false></app-horizontal-nav>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <main class="main">
+            <div class="content">
+                <div class="left-side">
+                    <h1>Hello, {{ title }}</h1>
+                    <p>Congratulations! Your app is running. 🎉</p>
+                    <router-outlet></router-outlet>
+                </div>
+            </div>
+        </main>
+    </mat-sidenav-content>
+</mat-sidenav-container>
 <app-footer></app-footer>

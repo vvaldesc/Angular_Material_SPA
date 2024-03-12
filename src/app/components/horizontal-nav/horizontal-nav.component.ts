@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-horizontal-nav',
@@ -6,5 +6,5 @@ import { Component } from '@angular/core';
   styleUrl: './horizontal-nav.component.css'
 })
 export class HorizontalNavComponent {
-
+  @Input() row = true;
 }

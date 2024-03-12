@@ -17,6 +17,7 @@ export class BuyProductFormComponent {
   static msg: string = 'Comprando';
   static msgMostrarForm: string = 'Mostrando datos del producto';
 
+  @Input() agotado: boolean = false;
   @Input() product: Product = {
     image: '',
     name: '',
