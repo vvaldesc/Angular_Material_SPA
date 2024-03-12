@@ -5,6 +5,8 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ComponentsModule } from '../components/components.module';
 import { NotFoundComponent } from './not-found/not-found.component';
 
+import { ProductsService } from '../services/products/products.service';
+
 
 
 @NgModule({
@@ -16,6 +18,9 @@ import { NotFoundComponent } from './not-found/not-found.component';
   imports: [
     CommonModule,
     ComponentsModule
-  ]
+  ],
+  providers: [
+    ProductsService
+  ],
 })
 export class PagesModule { }

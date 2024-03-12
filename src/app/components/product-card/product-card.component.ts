@@ -1,13 +1,14 @@
 import { Component, Input } from '@angular/core';
 
 type Product = {
-  id: number,
-  img: string,
+  image: string,
   name: string,
-  price: number,
   description: string,
-  fecha: Date
-}
+  unitAvailable: number,
+  date: Date
+  price: number,
+  category: string,
+};
 
 @Component({
   selector: 'app-product-card',
@@ -18,12 +19,13 @@ type Product = {
 export class ProductCardComponent {
 
   @Input() product: Product = {
-    id: 0,
-    img: '',
+    image: '',
     name: '',
-    price: 0,
     description: '',
-    fecha: new Date()
+    unitAvailable: 0,
+    date: new Date(),
+    price: 0,
+    category: '',
   };
 
   mostrarFormulario(): void {

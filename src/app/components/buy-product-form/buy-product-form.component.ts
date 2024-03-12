@@ -1,11 +1,13 @@
 import { Component, Input } from '@angular/core';
 type Product = {
-  id: number,
-  img: string,
+  image: string,
   name: string,
+  description: string,
+  unitAvailable: number,
+  date: Date
   price: number,
-  description: string
-}
+  category: string,
+};
 @Component({
   selector: 'app-buy-product-form',
   templateUrl: './buy-product-form.component.html',
@@ -16,11 +18,13 @@ export class BuyProductFormComponent {
   static msgMostrarForm: string = 'Mostrando datos del producto';
 
   @Input() product: Product = {
-    id: 0,
-    img: '',
+    image: '',
     name: '',
+    description: '',
+    unitAvailable: 0,
+    date: new Date(),
     price: 0,
-    description: ''
+    category: '',
   };
   
   formState: boolean = false
