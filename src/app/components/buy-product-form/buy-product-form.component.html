@@ -1,6 +1,7 @@
+
 <button 
 (click)="toogleForm()"
-[disabled]="(product.price === 0) ? true : false"
+[disabled]="agotado ? true : false"
 >Comprar</button>
     <form [style.display]="!formState ? 'none' : 'block'" (ngSubmit)="returnPost()">
         <label for="address" class="form-label">Address:</label>
@@ -14,7 +15,7 @@
         type="text" id="postalCode" name="postalCode" required class="form-input">
 
         <app-btn 
-            [disabled]="(product.price === 0) ? true : false" 
+            [disabled]="agotado ? true : false" 
             [func]="buyProduct"
             [id]="product.name"
         >Pedir</app-btn>

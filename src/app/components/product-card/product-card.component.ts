@@ -18,6 +18,7 @@ type Product = {
 
 export class ProductCardComponent {
 
+
   @Input() product: Product = {
     image: '',
     name: '',
@@ -26,7 +27,11 @@ export class ProductCardComponent {
     date: new Date(),
     price: 0,
     category: '',
-  };
+  } as Product;
+
+  agotado: boolean = true;
+  pocoStock: boolean = false;
+  caro: boolean = false;
 
   mostrarFormulario(): void {
     console.log('Mostrando formulario');
@@ -35,4 +40,15 @@ export class ProductCardComponent {
   specialStyle: any = {
     color: 'red'
   };  
+
+  ngOnInit(): void {
+    this.agotado = this.product.unitAvailable == 0;
+    this.pocoStock = this.product.unitAvailable < 10;
+    this.caro = this.product.price > 500;
+
+    console.log(this);
+    console.log(this.product.unitAvailable+' '+this.agotado);
+    console.log(this.pocoStock);
+    console.log(this.caro);
+  }
 }

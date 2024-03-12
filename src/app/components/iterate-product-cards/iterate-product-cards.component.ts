@@ -27,22 +27,10 @@ export class IterateProductCardsComponent implements OnInit{
     this.productsService.getProducts()
       .subscribe((response: any) => {
         this.products = response.products;
+        console.log('Servicio');
+        console.log(this.products);
       });
   }
-}
-
-function createArray(receivedProductsJson: string): Product[] {
-  const parsedJson = JSON.parse(receivedProductsJson);
-  const productsArray = parsedJson.products.map((product: any) => ({
-    img: product.image,
-    name: product.name,
-    description: product.description,
-    unitAvailable: parseInt(product.unitAvailable),
-    fecha: new Date(product.date),
-    price: parseFloat(product.price),
-    category: product.category || 'N/A' // Si no hay una categoría, establece un valor por defecto
-  }));
-  return productsArray;
 }
 
 
