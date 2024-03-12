@@ -10,6 +10,7 @@ import { AvatarComponent } from './avatar/avatar.component';
 import { BtnComponent } from './btn/btn.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { ProductCardComponent } from './product-card/product-card.component';
+import { IterateProductCardsComponent } from './iterate-product-cards/iterate-product-cards.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +21,8 @@ import { ProductCardComponent } from './product-card/product-card.component';
     AvatarComponent,
     BtnComponent,
     UserCardComponent,
-    ProductCardComponent],
+    ProductCardComponent,
+    IterateProductCardsComponent],
   imports: [
     BrowserModule,
     AppRoutingModule
