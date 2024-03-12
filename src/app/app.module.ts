@@ -11,6 +11,8 @@ import { BtnComponent } from './btn/btn.component';
 import { UserCardComponent } from './user-card/user-card.component';
 import { ProductCardComponent } from './product-card/product-card.component';
 import { IterateProductCardsComponent } from './iterate-product-cards/iterate-product-cards.component';
+import { BuyProductFormComponent } from './buy-product-form/buy-product-form.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,10 +24,12 @@ import { IterateProductCardsComponent } from './iterate-product-cards/iterate-pr
     BtnComponent,
     UserCardComponent,
     ProductCardComponent,
-    IterateProductCardsComponent],
+    IterateProductCardsComponent,
+    BuyProductFormComponent],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [
     provideClientHydration()

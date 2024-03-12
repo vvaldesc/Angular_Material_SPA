@@ -4,9 +4,6 @@
     <p class="product-price">{{product.price}}</p>
     <p class="product-description">{{product.description}}</p>
     <p *ngIf="product.price > 500" class="product-description">Es caro</p>
-    <app-btn 
-        [disabled]="(product.price === 0) ? true : false" 
-        [func]="buyProduct"
-        [id]="product.name"
-  ></app-btn>
+    <p class="product-description">{{product.fecha | date}}</p>
+    <app-buy-product-form [product]="product"></app-buy-product-form>
 </div>

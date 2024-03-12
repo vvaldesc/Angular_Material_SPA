@@ -5,7 +5,8 @@ type Product = {
   img: string,
   name: string,
   price: number,
-  description: string
+  description: string,
+  fecha: Date
 }
 
 @Component({
@@ -15,28 +16,18 @@ type Product = {
 })
 
 export class ProductCardComponent {
-  
-  static msg: string = 'Añadiendo al carrito';
-  /*@Input() id: number = 0;
-  @Input() img: string = '';
-  @Input() name: string = '';
-  @Input() price: number = 0;
-  @Input() description: string = '';*/
 
   @Input() product: Product = {
     id: 0,
     img: '',
     name: '',
     price: 0,
-    description: ''
+    description: '',
+    fecha: new Date()
   };
 
   mostrarFormulario() {
     console.log('Mostrando formulario');
-  }
-
-  buyProduct = (name: string) => {
-    console.log(ProductCardComponent.msg +' '+ name);
   }
 
   specialStyle = {
