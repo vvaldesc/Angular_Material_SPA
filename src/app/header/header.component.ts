@@ -1,12 +1,23 @@
-import { Component } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css'] // Fix: Updated styleUrl to styleUrls
+  template: `<h1
+                [ngStyle]="{ 'color': rol === 'admin' ? 'green' : '' }"
+              >
+                Cabecera {{ this.rol === 'admin' ? this.rol : '' }}
+              </h1>`,
+  //templateUrl: './header.component.html',
+  //styleUrls: ['./header.component.css']
 })
-export class HeaderComponent{
+export class HeaderComponent implements OnInit {
+  @Input() rol: string = 'admin';
+
   constructor() {
     console.log('HeaderComponent constructor');
+  }
+
+  ngOnInit() {
+    // Add any initialization logic here
   }
 }

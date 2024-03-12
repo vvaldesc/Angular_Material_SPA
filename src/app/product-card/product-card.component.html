@@ -1,7 +1,7 @@
 <div [style]="!(product.price > 500) ? specialStyle : ''" class="product-card">
     <img [src]="product.img" [alt]="product.img" class="product-image">
     <h2 class="product-title">{{product.name}}</h2>
-    <p class="product-price">{{product.price}}</p>
+    <p class="product-price">{{product.price | currency:'EUR':'symbol-narrow'}}</p>
     <p class="product-description">{{product.description}}</p>
     <p *ngIf="product.price > 500" class="product-description">Es caro</p>
     <p class="product-description">{{product.fecha | date}}</p>
