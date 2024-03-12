@@ -3,33 +3,17 @@ import { BrowserModule, provideClientHydration } from '@angular/platform-browser
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { HeaderComponent } from './header/header.component';
-import { FooterComponent } from './footer/footer.component';
-import { TitleComponent } from './title/title.component';
-import { AvatarComponent } from './avatar/avatar.component';
-import { BtnComponent } from './btn/btn.component';
-import { UserCardComponent } from './user-card/user-card.component';
-import { ProductCardComponent } from './product-card/product-card.component';
-import { IterateProductCardsComponent } from './iterate-product-cards/iterate-product-cards.component';
-import { BuyProductFormComponent } from './buy-product-form/buy-product-form.component';
-import { FormsModule } from '@angular/forms';
+import { ComponentsModule } from './components/components.module';
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent,
-    FooterComponent,
-    TitleComponent,
-    AvatarComponent,
-    BtnComponent,
-    UserCardComponent,
-    ProductCardComponent,
-    IterateProductCardsComponent,
-    BuyProductFormComponent],
+    AppComponent
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    FormsModule
+    ComponentsModule
   ],
   providers: [
     provideClientHydration()
