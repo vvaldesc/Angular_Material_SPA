@@ -1,1 +1,1 @@
-![image](https://github.com/vvaldesc/Angular_Practice/assets/124901115/630cbe6f-416f-49cf-84f7-e03ae174b8f3)
+![image](https://github.com/vvaldesc/Angular_Practice/assets/124901115/7b98c269-a5c3-471e-a8b3-04bf7e09f096)
