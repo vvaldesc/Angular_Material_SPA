@@ -1,0 +1,32 @@
+.product-card {
+    /* Estilos para el contenedor del producto */
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 10px;
+    margin: 10px;
+}
+
+.product-image {
+    /* Estilos para la imagen del producto */
+    width: 100%;
+    height: auto;
+}
+
+.product-title {
+    /* Estilos para el título del producto */
+    font-size: 18px;
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+.product-price {
+    /* Estilos para el precio del producto */
+    font-size: 16px;
+    margin-top: 5px;
+}
+
+.product-description {
+    /* Estilos para la descripción del producto */
+    font-size: 14px;
+    margin-top: 5px;
+}
