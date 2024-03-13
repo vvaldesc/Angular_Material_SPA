@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
-import products from '../../../assets/data/simProductos/productos';
+//import products from '../../../assets/data/simProductos/productos';
 import { ProductsService } from '../../services/products/products.service';
+import { Product , Products} from '../../interface/product.interface';
 
-type Product = {
+/*type Product = {
   image: string,
   name: string,
   description: string,
@@ -10,7 +11,8 @@ type Product = {
   date: Date
   price: number,
   category: string,
-};
+};*/
+
 
 @Component({
   selector: 'app-iterate-product-cards',
@@ -24,11 +26,15 @@ export class IterateProductCardsComponent implements OnInit{
   constructor(private productsService: ProductsService) {  }
 
   ngOnInit(): void {
-    this.productsService.getProducts()
+    this.productsService.getProducts1()
       .subscribe((response: any) => {
-        this.products = response.products;
-        console.log('Servicio');
-        console.log(this.products);
+        if ( response && response.products) {
+          this.products = response.products;
+          console.log('Servicio');
+          console.log(this.products);
+        }
+        else
+          console.log("Sin datos");
       });
   }
 }

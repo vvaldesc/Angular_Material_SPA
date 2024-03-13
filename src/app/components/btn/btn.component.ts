@@ -7,7 +7,7 @@ import { Component, Input } from '@angular/core';
 })
 export class BtnComponent {
   @Input() disabled: boolean = false;
-  @Input() func: Function = () => {};
+  @Input() func: Function = () => {};  
   @Input() id: string = '';
 
   handleClick(): void {
