@@ -1,2 +1,4 @@
-<button mat-button (click)="openDialog()">Iniciar Sesion</button>
-
+<button mat-button (click)="openDialog()">{{ 
+    this.usuario != '' ? 
+    this.usuario : 'Iniciar Sesion'}}
+</button>

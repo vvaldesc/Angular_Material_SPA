@@ -27,8 +27,6 @@ export class IterateProductCardsComponent implements OnInit{
     this.productsService.getProducts()
       .subscribe((response: any) => {
         this.products = response.products;
-        console.log('Servicio');
-        console.log(this.products);
       });
   }
 }
