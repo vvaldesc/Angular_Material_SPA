@@ -11,8 +11,6 @@ import { provideAnimationsAsync } from '@angular/platform-browser/animations/asy
 import { MaterialModule } from './material/material/material.module';
 import { MaterialCustomModule } from './material/material-custom-module/material-custom-module.module';
 
-
-
 @NgModule({
   declarations: [
     AppComponent,

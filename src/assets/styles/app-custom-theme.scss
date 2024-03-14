@@ -2,7 +2,7 @@
 
 @include mat.core();
 
-//1 definir paletas
+/*1 definir paletas*/
 /* For use in src/lib/core/theming/_palette.scss */
 $md-BluePalette: (
     50 : #efeaff,
@@ -106,14 +106,14 @@ $md-AbstractGreeen: (
 );
 
 
-//2 definir nuestras paletas
-$my-app-primary: mat.define-palette($md-BluePalette, 500);
-$my-app-accent: mat.define-palette($md-AccentPalette, 500);
-$my-app-warn: mat.define-palette($md-WarnPalette, 500);
+/*2 definir nuestras paletas*/
+$my-app-primary: mat.define-palette($md-PurplePalette, 500);
+$my-app-accent: mat.define-palette($md-BluePalette, 500);
+$my-app-warn: mat.define-palette($md-AbstractGreeen, 500);
 
 
 
-//3 agregar el tema personalizado
+/*3 agregar el tema personalizado*/
 $my-theme: mat.define-light-theme(
     (
         color: (
@@ -124,8 +124,8 @@ $my-theme: mat.define-light-theme(
     )
 );
 
-//4 aplicar el tema personalizado
+/*4 aplicar el tema personalizado*/
 @include mat.all-component-themes($my-theme);
 
 
-//5 agregar el tema personalizado en angular.json
+/*5 agregar el tema personalizado en angular.json*/
