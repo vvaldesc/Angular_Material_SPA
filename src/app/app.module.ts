@@ -9,8 +9,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { MaterialModule } from './material/material/material.module';
-
-
+import { MaterialCustomModule } from './material/material-custom-module/material-custom-module.module';
 
 @NgModule({
   declarations: [
@@ -22,7 +21,8 @@ import { MaterialModule } from './material/material/material.module';
     ComponentsModule,
     PagesModule,
     HttpClientModule,
-    MaterialModule
+    MaterialModule,
+    MaterialCustomModule
   ],
   providers: [
     provideClientHydration(),
