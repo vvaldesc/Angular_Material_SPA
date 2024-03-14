@@ -1,0 +1,131 @@
+@use '@angular/material' as mat;
+
+@include mat.core();
+
+//1 definir paletas
+/* For use in src/lib/core/theming/_palette.scss */
+$md-BluePalette: (
+    50 : #efeaff,
+    100 : #d8caff,
+    200 : #bea6ff,
+    300 : #a382ff,
+    400 : #9068ff,
+    500 : #7c4dff,
+    600 : #7446ff,
+    700 : #693dff,
+    800 : #5f34ff,
+    900 : #4c25ff,
+    A100 : #ffffff,
+    A200 : #ffffff,
+    A400 : #dad3ff,
+    A700 : #c4b9ff,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-PurplePalette: (
+    50 : #e8e2ec,
+    100 : #c7b6ce,
+    200 : #a185ae,
+    300 : #7b548e,
+    400 : #5f2f75,
+    500 : #430a5d,
+    600 : #3d0955,
+    700 : #34074b,
+    800 : #2c0541,
+    900 : #1e0330,
+    A100 : #b669ff,
+    A200 : #9d36ff,
+    A400 : #8503ff,
+    A700 : #7800e8,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #ffffff,
+        400 : #ffffff,
+        500 : #ffffff,
+        600 : #ffffff,
+        700 : #ffffff,
+        800 : #ffffff,
+        900 : #ffffff,
+        A100 : #000000,
+        A200 : #ffffff,
+        A400 : #ffffff,
+        A700 : #ffffff,
+    )
+);
+
+/* For use in src/lib/core/theming/_palette.scss */
+$md-AbstractGreeen: (
+    50 : #f6f8f4,
+    100 : #e7eee4,
+    200 : #d8e2d2,
+    300 : #c8d6bf,
+    400 : #bcceb2,
+    500 : #b0c5a4,
+    600 : #a9bf9c,
+    700 : #a0b892,
+    800 : #97b089,
+    900 : #87a378,
+    A100 : #ffffff,
+    A200 : #f8fff4,
+    A400 : #d6ffc1,
+    A700 : #c5ffa7,
+    contrast: (
+        50 : #000000,
+        100 : #000000,
+        200 : #000000,
+        300 : #000000,
+        400 : #000000,
+        500 : #000000,
+        600 : #000000,
+        700 : #000000,
+        800 : #000000,
+        900 : #000000,
+        A100 : #000000,
+        A200 : #000000,
+        A400 : #000000,
+        A700 : #000000,
+    )
+);
+
+
+//2 definir nuestras paletas
+$my-app-primary: mat.define-palette($md-BluePalette, 500);
+$my-app-accent: mat.define-palette($md-AccentPalette, 500);
+$my-app-warn: mat.define-palette($md-WarnPalette, 500);
+
+
+
+//3 agregar el tema personalizado
+$my-theme: mat.define-light-theme(
+    (
+        color: (
+            primary: $my-app-primary,
+            accent: $my-app-accent,
+            warn: $my-app-warn,
+        )
+    )
+);
+
+//4 aplicar el tema personalizado
+@include mat.all-component-themes($my-theme);
+
+
+//5 agregar el tema personalizado en angular.json

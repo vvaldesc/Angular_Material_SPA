@@ -15,7 +15,6 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
 
-import {MaterialSesionFormComponent} from '../material-sesion-form/material-sesion-form.component';
 
 
 
@@ -30,8 +29,7 @@ import {MaterialSesionFormComponent} from '../material-sesion-form/material-sesi
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule,
-    MaterialSesionFormComponent
+    MatSelectModule
   ],
   exports: [
     MatToolbarModule,
@@ -41,8 +39,7 @@ import {MaterialSesionFormComponent} from '../material-sesion-form/material-sesi
     MatIconModule,
     MatFormFieldModule,
     MatInputModule,
-    MatSelectModule,
-    MaterialSesionFormComponent
+    MatSelectModule
   ]
 })
 export class MaterialModule { }

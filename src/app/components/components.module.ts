@@ -13,6 +13,7 @@ import { BuyProductFormComponent } from './buy-product-form/buy-product-form.com
 import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from '../app-routing.module';
 import { HorizontalNavComponent } from './horizontal-nav/horizontal-nav.component'; // Import the missing AppRoutingModule
+
 @NgModule({
   declarations: [
     HeaderComponent,
