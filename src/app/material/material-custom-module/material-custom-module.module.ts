@@ -5,14 +5,13 @@ import { MaterialProductsTableComponent } from './material-products-table/materi
 import { MaterialSesionFormComponent } from './material-sesion-form/material-sesion-form.component';
 
 
-
 @NgModule({
   declarations: [
-    MaterialProductsTableComponent,
   ],
   imports: [
     CommonModule,
-    MaterialSesionFormComponent 
+    MaterialSesionFormComponent,
+    MaterialProductsTableComponent
   ],
   exports: [
     MaterialProductsTableComponent,
