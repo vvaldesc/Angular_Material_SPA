@@ -42,31 +42,37 @@ export class MaterialProductsTableComponent {
 
   ELEMENT_DATA: User[] = [];
 
-
   constructor(private usersService: UsersService) {
   }
 
   ngOnInit(): void {
     this.usersService.getAllUsers().subscribe((data) => {
-      console.log(data);
-      (data as { users: any[] }).users.map((user: any) => {
-        this.ELEMENT_DATA.push({
-          completeName: user.firstname + ' ' + user.lastname,
-          username: user.username,
-          ip: user.ip,
-          tlf: user.phone,
-          weight: user.weight,
-          address: {
-            address: user.address.address,
-            city: user.address.city,
-            postalCode: user.address.postalCode,
-            state: user.address.state,
-          },
+      console.log("////////////////////////////////////////");
+      if (data && 'users' in data) {
+        (data as { users: any[] }).users.map((user: any) => {
+          this.ELEMENT_DATA.push({
+            completeName: user.firstname + ' ' + user.lastname,
+            username: user.username,
+            ip: user.ip,
+            tlf: user.phone,
+            weight: user.weight,
+            address: {
+              address: user.address.address,
+              city: user.address.city,
+              postalCode: user.address.postalCode,
+              state: user.address.state,
+            },
+          });
+          console.log(user)
         });
-      });
+      } else {
+        console.error('No se encontró el campo "users" en los datos devueltos.');
+      }
     }); 
+
   }
 
   displayedColumns: string[] = ['completeName', 'username', 'ip', 'tlf','weight','address','city','postalCode','state'];
+  //displayedColumns: string[] = [ 'ip'];
   dataSource = this.ELEMENT_DATA;
 }

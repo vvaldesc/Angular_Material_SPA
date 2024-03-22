@@ -5,7 +5,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { ComponentsModule } from './components/components.module';
 import { PagesModule } from './pages/pages.module';
-import { HttpClientModule } from '@angular/common/http';
+
+//import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
+//import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { HttpClientModule, HttpClient } from '@angular/common/http';
+
 import { provideAnimationsAsync } from '@angular/platform-browser/animations/async';
 
 import { MaterialModule } from './material/material/material.module';

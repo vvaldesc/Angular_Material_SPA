@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="831669347010774967" datatype="html">
+        <source> Complete name </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">8,9</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="5381513611853730068" datatype="html">
+        <source> Username </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">14,15</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2458676640600959103" datatype="html">
+        <source> Weight </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">32,33</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="3856251571490896487" datatype="html">
+        <source> Address </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">38,39</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="2225846327777442642" datatype="html">
+        <source> City </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">44,45</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7069971706071354443" datatype="html">
+        <source> Postal Code </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">50,51</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="7396697477024945236" datatype="html">
+        <source> State </source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.html</context>
+          <context context-type="linenumber">56,57</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="completeName" datatype="html">
+        <source>completeName</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">49</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="username" datatype="html">
+        <source>username</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">50</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="weight" datatype="html">
+        <source>weight</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">53</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="address" datatype="html">
+        <source>address</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">54</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="city" datatype="html">
+        <source>city</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">55</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="postalCode" datatype="html">
+        <source>postalCode</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">56</context>
+        </context-group>
+      </trans-unit>
+      <trans-unit id="state" datatype="html">
+        <source>state</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">src/app/material/material-custom-module/material-products-table/material-products-table.component.ts</context>
+          <context context-type="linenumber">57</context>
+        </context-group>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
