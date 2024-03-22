@@ -4,6 +4,19 @@
   "newProjectRoot": "projects",
   "projects": {
     "nombreapp": {
+      "i18n": {
+        "sourceLocale": "en-US",
+        "locales": {
+          "en": {
+            "translation": "src/locale/messages.xlf",
+            "baseHref": ""
+          },
+          "es": {
+            "translation": "src/locale/messages.es.xlf",
+            "baseHref": ""
+          }
+        }
+      },
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -23,6 +36,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
+            "localize": true,
             "outputPath": "dist/nombreapp",
             "index": "src/index.html",
             "browser": "src/main.ts",
@@ -62,11 +76,35 @@
               "outputHashing": "all"
             },
             "development": {
+              "localize": false,
               "optimization": false,
               "extractLicenses": false,
               "sourceMap": true
+            },
+            "es": {
+              "localize": ["es"],
+              "outputPath": "dist/nombreapp/es",
+              "i18nMissingTranslation": "error",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.es.prod.ts"
+                }
+              ]
+            },
+            "en": {
+              "localize": ["en"],
+              "outputPath": "dist/nombreapp/en",
+              "i18nMissingTranslation": "error",
+              "fileReplacements": [
+                {
+                  "replace": "src/environments/environment.ts",
+                  "with": "src/environments/environment.en.prod.ts"
+                }
+              ]
             }
           },
+          
           "defaultConfiguration": "production"
         },
         "serve": {
@@ -77,6 +115,12 @@
             },
             "development": {
               "buildTarget": "nombreapp:build:development"
+            },
+            "es": {
+              "buildTarget": "nombreapp:build:es"
+            },
+            "en": {
+              "buildTarget": "nombreapp:build:en"
             }
           },
           "defaultConfiguration": "development"
