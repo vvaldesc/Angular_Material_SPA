@@ -11,4 +11,5 @@
 <mat-dialog-actions>
   <button mat-button (click)="onNoClick()">No Thanks</button>
   <button mat-button [mat-dialog-close]="data.productInterface" cdkFocusInitial>Ok</button>
+  <button mat-button (ngSubmit)="data.productInterface" cdkFocusInitial>Ok</button>
 </mat-dialog-actions>
