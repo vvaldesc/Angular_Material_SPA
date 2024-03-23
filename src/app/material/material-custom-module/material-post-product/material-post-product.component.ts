@@ -12,12 +12,13 @@ import {MatButtonModule} from '@angular/material/button';
 import {FormsModule} from '@angular/forms';
 import {MatInputModule} from '@angular/material/input';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import {CommonModule} from '@angular/common';
 
 import {Product} from '../../../models/Product';
 
 export interface DialogData {
-  animal: string;
-  name: string;
+  productInterfaceKeys: string[];
+  productInterface: Product;
 }
 
 /**
@@ -32,19 +33,28 @@ export interface DialogData {
 export class MaterialPostProductComponent {
   animal: string = '';
   name: string = '';
-
-
+  product: Product = {
+    image: '',
+    name: '',
+    description: '',
+    unitAvailable: 0,
+    date: new Date(),
+    price: 0,
+    category: '',
+  };
+  keys: string[] = Object.keys(this.product);
 
   constructor(public dialog: MatDialog) {}
 
   openDialog(): void {
+    console.log(this.keys);
     const dialogRef = this.dialog.open(DialogOverviewExampleDialog, {
-      data: {name: this.name, animal: this.animal},
+      data: {productInterfaceKeys: this.keys},
     });
 
     dialogRef.afterClosed().subscribe(result => {
       console.log('The dialog was closed');
-      this.animal = result;
+      this.product = result;
     });
   }
 }
@@ -62,6 +72,7 @@ export class MaterialPostProductComponent {
     MatDialogContent,
     MatDialogActions,
     MatDialogClose,
+    CommonModule
   ],
 })
 export class DialogOverviewExampleDialog {
