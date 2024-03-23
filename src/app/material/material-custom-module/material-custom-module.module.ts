@@ -5,21 +5,16 @@ import { MaterialProductsTableComponent } from './material-products-table/materi
 import { MaterialSesionFormComponent } from './material-sesion-form/material-sesion-form.component';
 import { MaterialPostProductComponent } from './material-post-product/material-post-product.component';
 
-
 @NgModule({
   declarations: [
   ],
   imports: [
-    CommonModule,
-    MaterialSesionFormComponent,
-    MaterialProductsTableComponent,
+    CommonModule, 
+    MaterialSesionFormComponent, 
+    MaterialProductsTableComponent, 
     MaterialPostProductComponent
-  ],
-  exports: [
-    MaterialProductsTableComponent,
-    MaterialSesionFormComponent,
-    MaterialPostProductComponent
-  ]
+   ],
+  exports: [ MaterialProductsTableComponent, MaterialSesionFormComponent, MaterialPostProductComponent ]
 })
 
 export class MaterialCustomModule { }
