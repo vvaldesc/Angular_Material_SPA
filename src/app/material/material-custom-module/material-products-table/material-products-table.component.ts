@@ -18,11 +18,9 @@ export class MaterialProductsTableComponent implements OnInit {
   displayedColumns: string[] = ['completeName', 'username', 'ip', 'tlf', 'weight', 'address', 'city', 'postalCode', 'state'];
 
   constructor(private usersService: UsersService) {
-    console.log('MaterialProductsTableComponent constructor');
   }
 
   ngOnInit(): void {
-    console.log('MaterialProductsTableComponent ngOnInit');
     this.usersService.getAllUsers().subscribe((data) => {
       if (data && 'users' in data) {
         const newData: User[] = []; // Array<User>
@@ -42,7 +40,6 @@ export class MaterialProductsTableComponent implements OnInit {
           });
         });
         this.ELEMENT_DATA.next(newData); //uso next para actualizar el valor del observable
-        console.log(this.ELEMENT_DATA.value);
       } else {
         console.error('No se encontró el campo "users" en los datos devueltos.');
       }
