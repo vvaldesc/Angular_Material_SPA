@@ -1,16 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import products from '../../../assets/data/simProductos/productos';
 import { ProductsService } from '../../services/products/products.service';
-
-type Product = {
-  image: string,
-  name: string,
-  description: string,
-  unitAvailable: number,
-  date: Date
-  price: number,
-  category: string,
-};
+import { Product } from '../../models/Product';
 
 @Component({
   selector: 'app-iterate-product-cards',
@@ -20,7 +11,7 @@ type Product = {
 export class IterateProductCardsComponent implements OnInit{
 
   products: Product[] = []; // Array of products
-
+  
   constructor(private productsService: ProductsService) {  }
 
   ngOnInit(): void {
